@@ -9,7 +9,7 @@ provider:
 
 functions:
   greet:
-    handler: ./src/greeter.handler
+    handler: ./src/infrastructure/handler/greeter.handler
     name: greet
     description: function that returns a greeting
     events:

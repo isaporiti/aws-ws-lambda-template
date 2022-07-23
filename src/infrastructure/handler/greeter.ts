@@ -1,5 +1,5 @@
 import { APIGatewayEvent, APIGatewayProxyResult } from "aws-lambda";
-import { greet } from "./application/greet";
+import { greet } from "../../application/greet";
 
 export async function handler(event: APIGatewayEvent): Promise<APIGatewayProxyResult> {
     const name = getNameToGreet(event)
