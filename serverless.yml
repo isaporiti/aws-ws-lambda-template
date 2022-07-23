@@ -1,0 +1,26 @@
+service: Greeter
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  stage: dev
+  timeout: 60
+
+functions:
+  greet:
+    handler: ./src/greeter.handler
+    name: greet
+    description: function that returns a greeting
+    events:
+      - http:
+          path: greet
+          method: get
+          request:
+            parameters:
+              querystrings:
+                name: true
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline

@@ -1,0 +1,9 @@
+.vscode
+.idea
+.DS_store
+.build
+
+node_modules
+
+src/**/*.js
+test/**/*.js
